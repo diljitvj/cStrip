@@ -11,14 +11,25 @@
     <!--<link rel="stylesheet" href="css/main.css"> -->
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.common.min.css" />
     <link rel="stylesheet" href="http://kendo.cdn.telerik.com/2016.3.914/styles/kendo.metroblack.min.css" />
+
 </head>
 
 <body>
     <p>Hello world! This is cStrip.</p>
-    
-    <!--Javascript -->
+    <div id="parent">
+        <p>Enter number of Scenes
+            <input type="number" min=1 max=6 data-bind="value: sceneNumber">
+            <button data-role="button" data-bind="events: { click: createScenes }">Create Scenes</button>
+        </p>
+    </div>
+    <div id="stripPanel"></div>
     <script src="http://kendo.cdn.telerik.com/2016.3.914/js/jquery.min.js"></script>
     <script src="http://kendo.cdn.telerik.com/2016.3.914/js/kendo.all.min.js"></script>
-</body>
-
+    <script src="./js/dragndrop.js"></script>
+    <script id="sceneTemplate" type="text/x-kendo-template">
+    # for(i=1; i<=data; i++) { # 
+    <div id="scene#: i #">
+        </div>
+        # } #
+</script>
 </html>
