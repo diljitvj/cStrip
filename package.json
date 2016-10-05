@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/diljitvj/cStrip/issues"
   },
-  "homepage": "https://github.com/diljitvj/cStrip#readme"
+  "homepage": "https://github.com/diljitvj/cStrip#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
