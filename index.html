@@ -9,7 +9,6 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!--<link rel="stylesheet" href="css/main.css"> -->
-    <link rel="stylesheet" href="./css/kendo.common.min.css" />
     <link rel="stylesheet" href="./css/kendo.bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 
@@ -19,33 +18,36 @@
     <p>Hello world! This is cStrip.</p>
     <div id="parent">
         <p>Enter number of Scenes
-            <input type="number" min=1 max=6 data-bind="value: sceneNumber">
-            <button data-role="button" data-bind="events: { click: createScenes }">Create Scenes</button>
+            <input id="numberOfScenes" type="number" min=1 max=5>
+            <button id="createSceneButton" data-role="button">Create Scenes</button>
         </p>
     </div>
-    <div class="scene" id="stripPanel"></div>
+    <br />
+    <div id="stripPanel"></div>
     <div id="characterPanel">
         <div class="character">
-            <img src="./images/dexter.png" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+            <img src="./images/dexter.png">
         </div>
         <div class="character">
             <img src="./images/calvin.png">
         </div>
     </div>
-
-<ul class='custom-menu'>
-<li data-action="first">First thing</li>
-<li data-action="second">Second thing</li>
-<li data-action="third">Third thing</li>
-</ul>
-
+    <br>
+    <div class="contextMenu">
+        <ul class="contextMenuList">
+          <li id="arrangeComicCharacter" class="contextMenuListItem moreMenu">
+            Arrange
+          </li>
+          <li id="flipComicCharacter" class="contextMenuListItem" onclick="contextMenu.flipComicCharacter(event)">
+            Flip
+          </li>
+          <li id="deleteComicCharacter" class="contextMenuListItem" onclick="contextMenu.deleteComicCharacter(event)">
+            Delete
+          </li>
+        </ul>
+    </div>
     <script src="./js/jquery.min.js"></script>
-    <script src="./js/kendo.all.min.js"></script>
+    <script src="./js/contextmenu.js"></script>
+    <script src="./js/createScenes.js"></script>
     <script src="./js/dragndrop.js"></script>
-    <script id="sceneTemplate" type="text/x-kendo-template">
-    # for(i=1; i<=data; i++) { # 
-    <div class="scene" id="scene#: i #">
-        </div>
-    # } #
-</script>
 </html>

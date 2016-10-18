@@ -1,11 +1,28 @@
+div{
+	box-sizing: border-box;
+}
+
 #stripPanel{
-	height: 350px;
+	height: 324px;
+	padding: 10px 0 10px 10px;
+	border: 2px solid #111111;
+}
+.sceneWrapper{
+	display: inline-block;
+}
+.scene{
+	height: 300px;
+	width: 280px;
+	display: inline-block;
+	border: 2px solid #111111;
+	margin-right: 10px;
+	position: relative;
 }
 
 #characterPanel{
 	border: 1px solid #bbbbbb;
 	padding: 10px;
-	display: inline-block;
+	margin-top: 10px;
 
 }
 
@@ -23,28 +40,46 @@
 	height: 100px;
 }
 
-.custom-menu {
-    display: none;
-    z-index: 1000;
-    position: absolute;
-    overflow: hidden;
-    border: 1px solid #CCC;
-    white-space: nowrap;
-    font-family: sans-serif;
-    background: #FFF;
-    color: #333;
-    border-radius: 5px;
-    padding: 0;
+.contextMenu{
+	display: inline-block;
+	position: absolute;
+	padding: 0;
+	background-color: #eeeeee;
+	border: 1px solid #666666;
+	border-radius: 5px;
+	font-family: sans-serif;
+	font-variant-caps: all-petite-caps;
+	box-shadow: 3px 3px 10px #999;
+}
+.contextMenuList{
+	list-style: none;
+	padding: 0px;
+	margin: 0;
+
+}
+.contextMenuListItem{
+	border-top: 1px solid #999999;
+	padding: 5px 10px;
+}
+.contextMenuListItem:first-child{
+	border-top: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.contextMenuListItem:last-child{
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.contextMenuListItem:hover{
+	background-color: #ffffff;
+	cursor: pointer;
+	overflow: hidden;
+}
+.contextMenuListItem.moreMenu:after{
+	content: '>';
+	font-weight: 900;
 }
 
-/* Each of the items in the list */
-.custom-menu li {
-    padding: 8px 12px;
-    cursor: pointer;
-    list-style-type: none;
-    transition: all .3s ease;
-}
-
-.custom-menu li:hover {
-    background-color: #DEF;
+.flipCharacter{
+	transform: scaleX(-1);
 }
