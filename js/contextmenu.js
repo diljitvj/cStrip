@@ -42,5 +42,9 @@ var contextMenu = {
       else{
         comicCharacter.addClass('flipCharacter');
       }
+    },
+
+    showArrangeMenu: function(){
+
     }
 }

@@ -40,7 +40,7 @@ div{
 	height: 100px;
 }
 
-.contextMenu{
+.contextMenu,.arrangeContextMenu{
 	display: inline-block;
 	position: absolute;
 	padding: 0;

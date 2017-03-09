@@ -35,7 +35,21 @@
     <br>
     <div class="contextMenu">
         <ul class="contextMenuList">
-          <li id="arrangeComicCharacter" class="contextMenuListItem moreMenu">
+          <li id="arrangeComicCharacter" class="contextMenuListItem moreMenu" onhover="contextMenu.showArrangeMenu(event)">
+            Arrange
+          </li>
+          <li id="flipComicCharacter" class="contextMenuListItem" onclick="contextMenu.flipComicCharacter(event)">
+            Flip
+          </li>
+          <li id="deleteComicCharacter" class="contextMenuListItem" onclick="contextMenu.deleteComicCharacter(event)">
+            Delete
+          </li>
+        </ul>
+    </div>
+
+    <div class="arrangeContextMenu">
+        <ul class="contextMenuList">
+          <li id="arrangeComicCharacter" class="contextMenuListItem moreMenu" onhover="contextMenu.showArrangeMenu(event)">
             Arrange
           </li>
           <li id="flipComicCharacter" class="contextMenuListItem" onclick="contextMenu.flipComicCharacter(event)">
